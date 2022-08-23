@@ -18,9 +18,8 @@ document.getElementById('btn-calculate').addEventListener('click', function () {
 
 })
 document.getElementById('calculate-total').addEventListener('click', function () {
-    const playerExpensesElement = document.getElementById('player-expenses');
-    const playerExpensesElementString = playerExpensesElement.innerText;
-    const playerExpenses = parseFloat(playerExpensesElementString);
+
+    const playerExpenses = getTextElementValueById('player-expenses');
 
 
     const managerSalaryElement = document.getElementById('manager-salary');

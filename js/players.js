@@ -1,12 +1,8 @@
 const playerArray = [];
 function selectedPlayers(favouritPlayers) {
-    // console.log(favouritPlayers);
     const selcetedList = document.getElementById('player-list');
     selcetedList.innerHTML = '';
-    // if (playerArray.length === 5) {
 
-    //     return true;
-    // }
     for (let i = 0; i < favouritPlayers.length; i++) {
         const name = playerArray[i].playerName;
 
@@ -43,9 +39,9 @@ function addPlayers(player) {
     selectedPlayers(playerArray);
 }
 
-const btn = document.getElementById('btn');
-
-btn.addEventListener('click', function onClick() {
-    btn.style.backgroundColor = 'gray';
-
-});
+buttonChangeColor('btn-neymar');
+buttonChangeColor('btn-messi');
+buttonChangeColor('btn-mbappe');
+buttonChangeColor('btn-ronaldo');
+buttonChangeColor('btn-shakib');
+buttonChangeColor('btn-litton');
