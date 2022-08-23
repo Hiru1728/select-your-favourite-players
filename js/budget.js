@@ -12,16 +12,19 @@ document.getElementById('btn-calculate').addEventListener('click', function () {
     // Clear the input value
 
     perPlayerPriceElement.value = '';
-
     if (isNaN(totalPlayerPrice)) {
         alert('Please input the number types veriable');
         totalPlayerPrice = 0;
-    }
 
+    }
     const playerExpensesElement = document.getElementById('player-expenses');
     const playerExpensesElementString = playerExpensesElement.innerText;
     const playerExpenses = parseFloat(playerExpensesElementString)
     playerExpensesElement.innerText = totalPlayerPrice;
+
+
+
+
 
 })
 document.getElementById('calculate-total').addEventListener('click', function () {

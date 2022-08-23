@@ -31,11 +31,12 @@ function addPlayers(player) {
         playerName: playerName
     }
     playerArray.push(playerObj);
-    document.getElementById('total-players').innerText = playerArray.length;
-    if (playerArray.length === 6) {
+
+    if (playerArray.length > 5) {
         alert('You can not added over the five players.');
         return;
     }
+    document.getElementById('total-players').innerText = playerArray.length;
     selectedPlayers(playerArray);
 }
 
