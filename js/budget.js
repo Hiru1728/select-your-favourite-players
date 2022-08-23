@@ -1,8 +1,12 @@
 // event heandler using calculate button
 document.getElementById('btn-calculate').addEventListener('click', function () {
     const perPlayerPriceElement = document.getElementById('per-player');
+    const totalPlayersElement = document.getElementById('total-players');
+    const totalPlayersString = totalPlayersElement.innerText;
+    const totalPlayers = parseInt(totalPlayersString);
+
     const perPlayerPrice = perPlayerPriceElement.value;
-    const totalPlayerPrice = perPlayerPrice * 5;
+    const totalPlayerPrice = perPlayerPrice * totalPlayers;
 
     // Clear the input value
     perPlayerPriceElement.value = '';

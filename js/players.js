@@ -3,7 +3,6 @@ function selectedPlayers(favouritPlayers) {
     // console.log(favouritPlayers);
     const selcetedList = document.getElementById('player-list');
     selcetedList.innerHTML = '';
-    console.log(playerArray.length);
     // if (playerArray.length === 5) {
 
     //     return true;
@@ -21,10 +20,12 @@ function selectedPlayers(favouritPlayers) {
         selcetedList.appendChild(tr);
 
     }
+
 }
 
 function addPlayers(player) {
     const playerName = player.parentNode.children[1].innerText;
+
     if (player.disabled === false) {
         player.disabled = true;
 
@@ -41,3 +42,10 @@ function addPlayers(player) {
     }
     selectedPlayers(playerArray);
 }
+
+const btn = document.getElementById('btn');
+
+btn.addEventListener('click', function onClick() {
+    btn.style.backgroundColor = 'gray';
+
+});
