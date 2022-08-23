@@ -6,10 +6,17 @@ document.getElementById('btn-calculate').addEventListener('click', function () {
     const totalPlayers = parseInt(totalPlayersString);
 
     const perPlayerPrice = perPlayerPriceElement.value;
+
     const totalPlayerPrice = perPlayerPrice * totalPlayers;
 
     // Clear the input value
+
     perPlayerPriceElement.value = '';
+
+    if (isNaN(totalPlayerPrice)) {
+        alert('Please input the number types veriable');
+        totalPlayerPrice = 0;
+    }
 
     const playerExpensesElement = document.getElementById('player-expenses');
     const playerExpensesElementString = playerExpensesElement.innerText;
@@ -28,10 +35,22 @@ document.getElementById('calculate-total').addEventListener('click', function ()
     managerSalaryElement.value = '';
 
 
+
+
     const coachSalaryElement = document.getElementById('coach-salary');
     const coachSalaryString = coachSalaryElement.value;
     const coachSalary = parseFloat(coachSalaryString);
     coachSalaryElement.value = '';
+
+    if (isNaN(managerSalary)) {
+        alert('Please input the number types veriable of Manager Salary');
+        totalSalary = 0;
+    }
+
+    if (isNaN(coachSalary)) {
+        alert('Please input the number types veriable of Coach Salary');
+        totalSalary = 0;
+    }
 
 
     let totalSalary = playerExpenses + managerSalary + coachSalary;
